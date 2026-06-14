@@ -1,0 +1,86 @@
+body {
+  background: #f7f7f3;
+}
+
+.container {
+  padding-bottom: 3rem;
+}
+
+.page-header {
+  padding: 2.5rem 0 1.5rem;
+}
+
+.page-header h1,
+.detail-page h1,
+.not-found h1 {
+  margin-bottom: 0.5rem;
+}
+
+.eyebrow {
+  color: #4d6b50;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  margin-bottom: 0.25rem;
+  text-transform: uppercase;
+}
+
+.spot-grid {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.spot-card {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  overflow: hidden;
+}
+
+.spot-card img,
+.detail-page img {
+  aspect-ratio: 16 / 9;
+  display: block;
+  object-fit: cover;
+  width: 100%;
+}
+
+.spot-card-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.spot-card-body h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.spot-card-body a {
+  margin-top: auto;
+}
+
+.detail-page {
+  margin-top: 1.5rem;
+}
+
+.detail-page table {
+  margin: 1.25rem 0;
+}
+
+.not-found {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+@media (max-width: 640px) {
+  .page-header {
+    padding-top: 1.5rem;
+  }
+
+  .spot-grid {
+    grid-template-columns: 1fr;
+  }
+}
