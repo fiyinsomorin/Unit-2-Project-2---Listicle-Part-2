@@ -6,6 +6,10 @@ body {
   padding-bottom: 3rem;
 }
 
+nav {
+  padding-top: 1rem;
+}
+
 .page-header {
   padding: 2.5rem 0 1.5rem;
 }
@@ -73,6 +77,15 @@ body {
 .not-found {
   padding: 4rem 0;
   text-align: center;
+}
+
+.status-message {
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.error-message {
+  color: #b42318;
 }
 
 @media (max-width: 640px) {

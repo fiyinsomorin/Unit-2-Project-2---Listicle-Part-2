@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Study Spot | Campus Study Spots</title>
+    <link rel="icon" href="/src/assets/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+    <link rel="stylesheet" href="/src/css/styles.css">
+    <script src="/src/scripts/detail.js" type="module"></script>
+  </head>
+  <body>
+    <main class="container">
+      <nav aria-label="Breadcrumb">
+        <ul>
+          <li><a href="/">Campus Study Spots</a></li>
+        </ul>
+      </nav>
+
+      <p id="status-message" class="status-message" role="status">Loading study spot...</p>
+      <article id="spot-detail" class="detail-page" hidden>
+        <img id="spot-image" src="" alt="">
+        <h1 id="spot-name"></h1>
+        <table>
+          <tbody id="spot-details"></tbody>
+        </table>
+        <a href="/" role="button" class="secondary">Back to all spots</a>
+      </article>
+
+      <section id="not-found" class="not-found" hidden>
+        <h1>Study Spot Not Found</h1>
+        <p>The study spot you requested does not exist.</p>
+        <a href="/" role="button">Back to Home</a>
+      </section>
+    </main>
+  </body>
+</html>
