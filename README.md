@@ -1,10 +1,12 @@
-# WEB103 Project 1 - *Campus Study Spots*
+# WEB103 Project 2 - *Campus Study Spots*
 
 Submitted by: **Fiyinfoluwa Somorin**
 
-About this web app: **Campus Study Spots is a listicle web app that helps students compare five places to study on campus. Each study spot includes shared details like location, noise level, best use, seating, hours, and outlet availability.**
+About this web app: **Campus Study Spots is a database-backed listicle that helps students compare five places to study on campus. Users can browse study spots and open a detailed page showing each spot's location, noise level, best use, seating, hours, and power outlet availability.**
 
-Time spent: **3** hours
+Time spent: **6** hours
+
+Live app: [https://campus-study-spots.onrender.com](https://campus-study-spots.onrender.com)
 
 ## Required Features
 
@@ -12,35 +14,37 @@ The following **required** functionality is completed:
 
 <!-- Make sure to check off completed functionality below -->
 - [x] **The web app uses only HTML, CSS, and JavaScript without a frontend framework**
-- [x] **The web app displays a title**
-- [x] **The web app displays at least five unique list items, each with at least three displayed attributes (such as title, text, and image)**
-- [x] **The user can click on each item in the list to see a detailed view of it, including all database fields**
-  - [x] **Each detail view should be a unique endpoint, such as as `localhost:3000/bosses/crystalguardian` and `localhost:3000/mantislords`**
-  - [x] *Note: When showing this feature in the video walkthrough, please show the unique URL for each detailed view. We will not be able to give points if we cannot see the implementation*
-- [x] **The web app serves an appropriate 404 page when no matching route is defined**
-- [x] **The web app is styled using Picocss**
+- [x] **The web app is connected to a PostgreSQL database, with an appropriately structured database table for the list items**
+  - [x] **NOTE: Your walkthrough added to the README must include a view of your Render dashboard demonstrating that your Postgres database is available**
+  - [ ] **NOTE: Your walkthrough added to the README must include a demonstration of your table contents. Use the psql command `SELECT * FROM study_spots;` to display your table contents.**
 
 The following **optional** features are implemented:
 
-- [x] The web app displays items in a unique format, such as cards rather than lists or animated list items
+- [ ] The user can search for items by a specific attribute
 
 The following **additional** features are implemented:
 
-- [x] Detail pages include all shared fields for each study spot
-- [x] The app includes a custom 404 page for unknown URLs
-- [x] The layout is responsive for smaller screens
+- [x] Each study spot has a unique detail-page URL
+- [x] Detail pages display all fields retrieved from PostgreSQL
+- [x] The app includes custom not-found states for invalid pages and study spots
+- [x] The responsive card layout works on smaller screens
+- [x] The app provides database-backed JSON API endpoints
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented required features:
 
-<img src='Listicle Part 1.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
+<img src='Part2.gif' title='Campus Study Spots Video Walkthrough' width='' alt='Campus Study Spots Video Walkthrough' />
 
 GIF created with CloudConvert
 
+### Render PostgreSQL Database
+
+<img src='readme-assets/render-database-available.png' title='Render PostgreSQL Database Available' width='' alt='Render dashboard showing the campus study spots PostgreSQL database is available' />
+
 ## Notes
 
-This project uses Express routes to render the homepage, individual study spot detail pages, and a custom 404 page. The study spot data is stored in one JavaScript array so it can be moved into a database in a later project.
+The app uses a vanilla HTML, CSS, and JavaScript frontend with an Express backend. Express retrieves study spot data from a Render PostgreSQL database through parameterized queries and exposes it through JSON API endpoints. One challenge was configuring the deployed Render web service with the database's internal connection URL.
 
 ## License
 
